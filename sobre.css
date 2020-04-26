@@ -1,0 +1,76 @@
+body{
+    color: #333333;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: 940px;
+}
+
+h1{
+    background-image: url(img/sobre-background.jpg);
+    padding: 10px;
+    border: 2px solid #333333;
+    /*margin: 50px*/;
+}
+
+h2{
+    border-bottom: 2px solid #333333;
+    margin-top: 30px;
+}
+
+figure{
+    text-align: center;
+    padding: 10px;  
+    /*margin: 30px;*/
+}
+
+figcaption{
+    font-style: italic;
+    margin-top: 10px;
+}
+
+p{
+    padding: 0 45px;
+    text-indent: 15px;
+    text-align: justify;
+    /*text-align: right;*/
+    /*line-height: 3px; tamanho da altura de cada linha*/
+    /*letter-spacing: 3px; tamanho do espaço entre cada letra*/
+    /*word-spacing: 5px; tamanho do espaço entre cada palavra*/
+    /*text-indent: 30px; tamanho da margem da primeira linha do texto*/
+    /*color: blue;*/
+    /*background-color: yellow;*/
+}
+
+
+#centro-distribuicao{
+    /*margin-left: auto;
+    margin-left: auto;*/
+    margin: 0 0 10px 10px;
+}
+
+
+#familia-pelho{
+    border: 1px solid #ccc; 
+    background-color: #f2eded;
+    float: right;
+    margin: 0 0 10px 10px;
+}
+
+
+footer{
+    color: #000000;
+    margin: 30px 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+footer img{ /*o espaço entre os dois seletores é pegar o filho*/
+    margin-right: 30px;
+    vertical-align: middle;
+    width: 94px;
+}
+
+footer p{ /*o espaço entre os dois seletores é pegar o filho*/
+    color: #ff0000;
+}

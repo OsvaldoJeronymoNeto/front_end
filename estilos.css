@@ -26,6 +26,8 @@ header{
     display: inline;
     margin-left: 20px;
     font-size: 15px;
+    position: relative;
+    top: 10px;
 }
 
 .menu-opcoes a {

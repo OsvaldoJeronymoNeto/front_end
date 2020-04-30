@@ -1,5 +1,18 @@
+/*linguagem de folhas de estilos*/
+body{
+    color: #333333;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
 header{
     position: relative;
+}
+
+.container{ /*essa tag div que foi chamada de container fixa a largura
+            disponível para o conteúdo e centralizá-lo na página. Além disso,
+            deixa um espaço em branco nas laterais.*/
+    margin: 0 auto;
+    width: 960px;
 }
 
 .sacola {
@@ -32,14 +45,4 @@ header{
 
 .menu-opcoes a {
     color: #003366;
-}
-
-body{
-    color: #333333;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-}
-
-.container{
-    margin: 0 auto;
-    width: 940px;
 }

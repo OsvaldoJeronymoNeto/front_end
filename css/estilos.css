@@ -1,4 +1,6 @@
 /*linguagem de folhas de estilos*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
 html {
     font-size: 14px; /* px significa "pixels": o tamanho da fonte base é agora de 10 pixels */ 
     font-family: "Open Sans", sans-serif; /* este deve ser o nome da fonte que você obteve no Google Fonts */ 
@@ -6,18 +8,20 @@ html {
 
 body{
     color: #333333;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;/*Espaçamento entre as linhas*/
 }
 
 header{
     position: relative;
 }
 
-.container{ /*essa tag div que foi chamada de container fixa a largura
-            disponível para o conteúdo e centralizá-lo na página. Além disso,
-            deixa um espaço em branco nas laterais.*/
-    margin: 0 auto;
-    width: 960px;
+h1 {
+	font-weight: 300;
+	font-size: 60px;
+	line-height: 1.2;
+	margin-bottom: 15px;
 }
 
 .sacola {

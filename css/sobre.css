@@ -1,24 +1,131 @@
-html {
-    font-size: 14px; /* px significa "pixels": o tamanho da fonte base é agora de 10 pixels */ 
-    font-family: "Open Sans", sans-serif; /* este deve ser o nome da fonte que você obteve no Google Fonts */ 
+/*linguagem de folhas de estilos*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+/*A Regra Atribuída (at-rule) CSS @import é usado para importar regras de 
+estilo de outras folhas de estilo.*/
+
+:root {
+	--primary-color/*variavel CSS global*/: #3a4052;
+}
+
+/*A pseudo-class CSS  :root representa o elemento root de uma árvore, 
+representando o documento. Aplicado ao HTML, :root representa o elemento 
+<html>  e é identico ao seletor html, exceto que sua especificidade é mais 
+alta.*/
+
+* {
+	box-sizing: border-box;
+/*A propriedade CSS box-sizing é utilizada para alterar a propriedade padrão
+da box model, usada para calcular larguras (widths) e alturas (heights) dos
+elementos. É possível usar essa propriedade para emular o comportamento dos
+navegadores (browsers) que não suportam corretamente a especificação da 
+propriedade CSS box model.*/
+	margin: 0;
+	padding: 0;
 }
 
 body{
-    color: #333333;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    margin-left: auto;
-    margin-right: auto;
-    width: 940px;
+    font-family: 'Open Sans', sans-serif;
+	line-height: 1.5;/*Espaçamento entre as linhas*/
+	background-color:  #fdfdfd;
+	color: #232323;
+/*background: var(--primary-color);*/
 }
 
-h1{
-    background-image: url(img/sobre-background.jpg);
-    padding: 10px;
-    border: 2px solid #333333;
-    /*margin: 50px*/;
+a {
+	text-decoration: none;
+	color: var(--primary-color);
 }
 
-h2{
+h1 {
+	font-weight: 300;
+	font-size: 60px;
+	line-height: 1.2;
+	margin-bottom: 15px;
+}
+
+.showcase {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #fff;
+	padding: 0 20px;
+}
+
+.video-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: var(--primary-color) url('./https://traversymedia.com/downloads/cover.jpg') no-repeat center
+		center/cover;
+}
+
+.video-container video {
+	min-width: 100%;
+	min-height: 100%;
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	object-fit: cover;
+}
+
+.video-container:after {
+	content: '';
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+}
+
+.content {
+	z-index: 2;
+}
+
+.btn {
+	display: inline-block;
+	padding: 10px 30px;
+	background: var(--primary-color);
+	color: #fff;
+	border-radius: 5px;
+	border: solid #fff 1px;
+	margin-top: 25px;
+	opacity: 0.7;
+}
+
+.btn:hover {
+	transform: scale(0.98);
+}
+
+#about {
+	padding: 40px;
+	text-align: center;
+}
+
+#about p {
+	font-size: 1.2rem;
+	max-width: 600px;
+	margin: auto;
+}
+
+#about h2 {
+	margin: 30px 0;
+	color: var(--primary-color);
+}
+
+.social a {
+	margin: 0 5px;
+}
+
+/* h2{
     border-bottom: 2px solid #333333;
     margin-top: 30px;
 }
@@ -26,7 +133,7 @@ h2{
 figure{
     text-align: center;
     padding: 10px;  
-    /*margin: 30px;*/
+    margin: 30px;
 }
 
 figcaption{
@@ -38,22 +145,20 @@ p{
     padding: 0 45px;
     text-indent: 15px;
     text-align: justify;
-    /*text-align: right;*/
-    /*line-height: 3px; tamanho da altura de cada linha*/
-    /*letter-spacing: 3px; tamanho do espaço entre cada letra*/
-    /*word-spacing: 5px; tamanho do espaço entre cada palavra*/
-    /*text-indent: 30px; tamanho da margem da primeira linha do texto*/
-    /*color: blue;*/
-    /*background-color: yellow;*/
+    text-align: right;
+    line-height: 3px; tamanho da altura de cada linha
+    letter-spacing: 3px; tamanho do espaço entre cada letra
+    word-spacing: 5px; tamanho do espaço entre cada palavra
+    text-indent: 30px; tamanho da margem da primeira linha do texto
+    color: blue;
+    background-color: yellow;
 }
-
 
 #centro-distribuicao{
-    /*margin-left: auto;
-    margin-left: auto;*/
+    margin-left: auto;
+    margin-left: auto;
     margin: 0 0 10px 10px;
 }
-
 
 #familia-pelho{
     border: 1px solid #ccc; 
@@ -62,6 +167,12 @@ p{
     margin: 0 0 10px 10px;
 }
 
+.container{ essa tag div que foi chamada de container fixa a largura
+            disponível para o conteúdo e centralizá-lo na página. Além disso,
+            deixa um espaço em branco nas laterais.
+    margin: 0 auto;
+    width: 960px;
+}
 
 footer{
     color: #000000;
@@ -70,12 +181,13 @@ footer{
     padding-bottom: 40px;
 }
 
-footer img{ /*o espaço entre os dois seletores é pegar o filho*/
+footer img{ o espaço entre os dois seletores é pegar o filho
     margin-right: 30px;
     vertical-align: middle;
     width: 94px;
 }
 
-footer p{ /*o espaço entre os dois seletores é pegar o filho*/
+footer p{ o espaço entre os dois seletores é pegar o filho
     color: #ff0000;
 }
+*/

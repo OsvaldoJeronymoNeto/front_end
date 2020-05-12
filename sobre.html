@@ -1,15 +1,41 @@
 <!DOCTYPE html> <!-- é uma instrução para o navegador saber em que versão do HTML está o arquivo -->
+
 <html lang="pt-BR">
+
     <head> <!-- contém informações sobre nosso documento que são de interesse somente do navegador -->
         <meta charset="utf-8"> <!--configuração da codificação de caracteres-->
-        <title>Sobre a Mirror Fashion</title>
-        <link rel="stylesheet" href="css/estilos.css">
+        <title>Alyeska</title>
+        <link rel="stylesheet" href="css/sobre.css">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     </head>
+
     <body>
-        <img    src="img/logo.png" alt="Logo da Mirror Fashion">
-        <h1>A Mirror Fashion</h1>
+
+        <section class="showcase">
+            
+            <div class="video-container">
+                <video src="https://traversymedia.com/downloads/video.mov" autoplay muted loop></video>
+            </div>
+            
+            <div class="content">
+				<h1>The Alyeska</h1>
+                <h3>The last frontier</h3>
+                <a href="#about" class="btn">Read More</a>
+            </div>
+            
+        </section>        
         
+        <section id="about">
+			<h1>About</h1>
+			<p>
+				This is a landing page with a full screen video background. Feel free to
+				use this landing page in your projects. keep adding sections, change the
+				video, content , etc
+			</p>
+		</section>
+        
+
+
         <p>
             A <strong>Mirror Fashion</strong> é a maior empresa comércio eletrônico no segmento de moda em todo o mundo. 
             Fundada em 1932, possui filiais em 124 países, sendo líder de mercado com mais de 90% de 
@@ -53,18 +79,15 @@
             de usuários diferentes, em bilhões de diferentes pedidos.
         </p>
         
-        <p>
-            O crescimento em número de funcionários é também assombroso. Hoje, é a maior empregadora do 
-            Brasil, mas mesmo após apenas 5 anos de sua existência, já possuía 30 mil funcionários. Fora do 
-            Brasil, há 240 mil funcionários, além dos 890 mil brasileiros nas instalações de Jacarezinho e 
-            nos escritórios em todo país.         
-        </p>
+        <h2>Follow Me On Social Media</h2>
+
+       <!--<div class="social">
+            <a href="https://twitter.com/traversymedia" target="_blank"><i class="fab fa-twitter fa-3x"></i></a>
+            <a href="https://facebook.com/traversymedia" target="_blank"><i class="fab fa-facebook fa-3x"></i></a>
+            <a href="https://github.com/bradtraversy" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+            <a href="https://www.linkedin.com/in/bradtraversy" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+        </div> Bootstrap --> 
         
-        <p>
-            Dada a importância econômica da empresa para o Brasil, a família Pelho já recebeu diversos prêmios, 
-            homenagens e condecorações. Todos os presidentes do Brasil já visitaram as instalações da Mirror 
-            Fashion, além de presidentes da União Européia, Ásia e o secretário-geral da ONU.
-        </p>
 
         <h2 id="diferenciais">Diferenciais</h2>
 
@@ -80,8 +103,7 @@
         </ul>
 
         <footer>
-            <img src="img/logo.png" alt="Logo da Mirror Fashion">
-            <p>&copy; <strong> Fashion Mirror</strong></p> 
+            <h2>Fotter</h2>
         </footer>
     </body>
 </html>
